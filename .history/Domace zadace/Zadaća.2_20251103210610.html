@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zadaća 2.">
+    <meta name="keywords" content="HTML">
+    <meta name="author" content="Lara Biondić">
+    <title>Zadaća 2.</title>
+</head>
+<body>
+    <h2>Serija</h2>
+    <h3>Outer Banks</h3>
+    <table border="1">
+        <tr>
+            <th>Br.</th>
+            <th colspan="2">Ime i prezime glumca</th>
+            <th>Broj epizoda u kojima se pojavljuju</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>Chase</td>
+            <td>Stokes</td>
+            <th rowspan="4">50</th>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Madelyn</td>
+            <td>Cline</td>
+            
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Madison</td>
+            <td>Bailey</td>
+            
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>Drew</td>
+            <td>Starkey</td>
+            
+        </tr>
+
+    </table>
+    <hr>
+    <br>
+    <h3>Obrazac</h3>
+    <form action="#" method="get">
+        <label for="ime">Unesi ime:</label>
+        <input type="text" id="Ime" placeholder="Unesi ime...">
+        <br>
+        <br>
+        <label for="prezime">Unesi prezime:</label>
+        <input type="text" id="prezime">
+        <br>
+        <br>
+        <label for="pass">Unesi lozinku:</label>
+        <input type="password" name="pass" id="pass" required>
+        <br>
+        <p>Odaberi:</p>
+        <input type="radio" name="admin" id="admin">
+        <label for="admin">Admin</label>
+        <input type="radio" name="guest" id="guest">
+        <label for="guest">Guest</label>
+        <br>
+        <br>
+        <p>Ovim potvrđujem da sam unio svoje ime, 
+            prezime i lozinku <br>te odabrao odgovarajuću razinu pristupa 
+            (gost ili administrator). <br> U cijelosti potvrđujem da su podatci 
+            točni i upoznat sam s <br>navedenim uvjetima korištenja te ih dobrovoljno prihvaćam, <br> 
+            uključujući sve pripadajuće obveze i odgovornosti.</p>
+        <input type="checkbox" name="uvjeti korištenja" id="uvjeti korištenja">
+        <label for="uvjeti korištenja">Prihvaćam uvjete korištenja!</label>
+        <br>
+        <br>
+        <input type="submit" value="Pošalji">
+        <input type="reset" value="Poništi">
+    </form>
+    
+</body>
+</html>
