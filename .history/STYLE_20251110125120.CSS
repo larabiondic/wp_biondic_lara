@@ -1,0 +1,16 @@
+
+h2
+ {color: aqua; background-color: black;}
+ body { color: blanchedalmond; background-color: beige;}
+
+
+ /* pristup preko ID-a */
+ #prvi {
+    color: yellow;
+ }
+
+
+ /* pristup prekoa klase */
+ .drugi {
+    color: red;
+ }
