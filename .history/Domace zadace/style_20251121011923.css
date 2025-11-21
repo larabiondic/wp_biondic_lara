@@ -1,0 +1,19 @@
+/* Google fontovi */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Zadatak 2.1 */
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* Zadatak 2.2 */
+h2 {
+    color: #4CAF50;
+}

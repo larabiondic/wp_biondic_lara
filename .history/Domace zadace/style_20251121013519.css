@@ -1,0 +1,109 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+
+h2 {
+    color: #4CAF50;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ECEFF1; 
+    margin: 0;
+    padding: 20px;
+}
+
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+
+h2 {
+    color: #4CAF50;
+    font-weight: 400;
+}
+
+
+p:nth-of-type(1) {
+    font-size: 16px;
+    color: #37474F;
+}
+
+p:nth-of-type(2) {
+    font-size: 18px;
+    color: #546E7A;
+}
+
+p:nth-of-type(3) {
+    font-size: 20px;
+    color: #78909C;
+}
+
+
+ul {
+    padding-left: 20px;
+}
+
+ul {
+    list-style: none; 
+    padding-left: 20px;
+}
+
+ul li:nth-of-type(1)::before {
+    content: "★ "; 
+    color: gold;
+}
+
+ul li:nth-of-type(2)::before {
+    content: "➤ "; 
+    color: #03A9F4;
+}
+
+ul li:nth-of-type(3)::before {
+    content: "❤ "; 
+    color: red;
+}
+
+ul li:nth-of-type(4)::before {
+    content: "♦ "; 
+    color: purple;
+}
+
+ul li:nth-of-type(5)::before {
+    content: "☀ "; 
+    color: orange;
+}
+
+ul li:nth-of-type(6)::before {
+    content: "▶ "; 
+    color: green;
+}
+
+ul li:nth-of-type(7)::before {
+    content: "🌟 "; 
+    color: #FF5722;
+}
+
+ul li:nth-of-type(8)::before {
+    content: "🍀 "; 
+    color: #4CAF50;
+}
