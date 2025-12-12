@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zadaća 5">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Lara Biondić">
+    <title>Zadaća 5.</title>
+</head>
+<style>
+    /* RESET & VARS */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #f7f6f3;
+  --card: #ffffff;
+  --accent: #c94a4a;
+  --muted: #6b6b6b;
+  --max-width: 1100px;
+  --gap: 18px;
+  --radius: 12px;
+  --shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+/* CONTAINER */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.site-header {
+  background: linear-gradient(90deg,#fff 0%, #f2f2f2 100%);
+  border-bottom: 2px solid #e6e6e6;
+  box-shadow: var(--shadow);
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header h1 {
+  font-family: Arial, sans-serif;
+  font-size: 1.8rem;
+}
+
+.main-nav a {
+  margin-left: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav a:hover { color: var(--accent); }
+
+/* GRID ROOT: 12 COLUMNS */
+.grid-root {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+  background: var(--bg);
+  padding-top: 20px;
+}
+
+/* A — FEATURED */
+.featured {
+  grid-column: 1 / -1;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.featured img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* B — CONTENT (8 columns) */
+.content {
+  grid-column: 1 / span 8;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  min-height: 200px;
+}
+
+.recipe {
+  margin-bottom: 18px;
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 12px;
+}
+
+.recipe img {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+/* C — SIDEBAR (4 columns) */
+.sidebar {
+  grid-column: 9 / -1;
+  background: var(--card);
+  padding: 16px;
+  border-radius: var(--radius);
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+}
+
+.sidebar a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.about {
+  margin-top: 15px;
+  color: var(--muted);
+}
+
+/* FOOTER */
+.site-footer {
+  margin-top: 20px;
+  border-top: 1px solid #e6e6e6;
+  text-align: center;
+  background: #fff;
+}
+
+.site-footer p {
+  padding: 12px;
+  color: #777;
+}
+
+/* TYPOGRAPHY */
+h2, h3, h4 {
+  margin-bottom: 8px;
+  color: #222;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* RESPONSIVE — 480px */
+@media (max-width: 480px) {
+
+  .grid-root {
+    grid-template-columns: 1fr; /* jedna kolona */
+    gap: 12px;
+  }
+
+  .featured, .content, .sidebar {
+    grid-column: 1 / -1; /* A → B → C */
+  }
+
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .main-nav a {
+    margin: 0 10px 0 0;
+  }
+}
+
+</style>
+<body>
+    
+  <header class="site-header">
+    <div class="container">
+      <h1>Moji Recepti</h1>
+
+      <nav class="main-nav" aria-label="Glavna navigacija">
+        <a href="#recepti">Recepti</a>
+        <a href="#kategorije">Kategorije</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  
+  <main class="container grid-root">
+
+   
+    <section class="featured" id="featured">
+      <h1>Izabrani recept: Tjestenina s pestom</h1>
+      <p>Brz, lagan i ukusan ručak gotov za samo 15 minuta.</p>
+      <img src="https://planetzdravlja.eu/wp-content/uploads/2022/03/cheese-cherry-tomato-cook-1435896_0-1536x1269.jpg" alt="Tjestenina s pestom" >
+    </section>
+
+
+    <section class="content" id="recepti">
+      <h1>Recepti</h1>
+
+      <article class="recipe">
+        <h2>Čokoladni kolač</h2>
+        <img src="https://ip.index.hr/remote/bucket.index.hr/b/index/c43b26d6-e509-4950-ad2a-aaf4ff2bfd2a.jpg?width=765&height=765" alt="Čokoladni kolač" width="50px">
+        <p>Mekan, sočan i bogat čokoladom. Idealno za svaku priliku.</p>
+        <ul>
+          <li>Kategorija: Desert</li>
+          <li>Vrijeme pripreme: 45 min</li>
+        </ul>
+      </article>
+
+      <article class="recipe">
+        <h2>Salata s kvinojom</h2>
+        <img src="https://www.tvornicazdravehrane.com/upload/publish/68630/thumb/-arena-salata-s-kvinojom1_5e9c95586b506_1000x510c.webp" alt="Salata s kvinojom">
+        <p>Osvježavajuća i zdrava — kombinacija povrća i laganog limuna.</p>
+        <ul>
+          <li>Kategorija: Salata</li>
+          <li>Vrijeme pripreme: 10 min</li>
+        </ul>
+      </article>
+
+      <article class="recipe">
+        <h2>Piletina u umaku od gljiva</h2>
+        <img src="https://putnikofer.hr/wp-content/uploads/2024/02/piletina-u-umaku-og-gljiva-1200x800.webp" alt="Piletina u umaku od gljiva">
+        <p>Kremasto i aromatično jelo pogodno za ručak ili večeru.</p>
+        <ul>
+          <li>Kategorija: Glavno jelo</li>
+          <li>Vrijeme pripreme: 30 min</li>
+        </ul>
+      </article>
+
+    </section>
+
+    
+    <aside class="sidebar" id="kategorije">
+      <h3>Kategorije</h3>
+      <ul>
+        <li><a href="#">Deserti</a></li>
+        <li><a href="#">Glavna jela</a></li>
+        <li><a href="#">Salate</a></li>
+      </ul>
+
+      <div class="about">
+        <h4>O autoru</h4>
+        <p>Svaki moj recept ima priču, a sada ih pričam svima, od mene do vaše kuhinje!</p>
+      </div>
+    </aside>
+
+  </main>
+
+  
+  <footer class="site-footer" id="kontakt">
+    <div class="container">
+      <p>&copy; 2025 Moji Recepti — Ukusno i slasno.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
