@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.Kolokvij</title>
+    <style>
+       .belgija {
+    display: flex;
+    width: 300px;
+    height: 200px;
+       }
+       .crna {
+    background-color: black;
+    width: 33.33%;  
+       }
+       .žuta {
+    background-color: yellow;
+    width: 33.33%;
+       }
+       .crvena {
+    background-color: red;
+    width: 33.33%;
+       }
+       
+       .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 300px;
+        }
+
+        .grid div {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+        }
+        
+        .box {
+    border: 1px solid black;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+        }
+
+        .klasa1 {
+    color: purple;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+        }
+
+        .klasa2 {
+    color: green;
+    font-size: 20px;
+    margin-bottom: 10px;
+        }
+        
+        .klasa3 {
+    color: orange;
+    font-size: 22px;
+    margin-bottom: 10px;
+        }     
+
+        #prvi {
+    color: blue;
+    margin: 20px;
+    font-weight: bold;
+        }
+
+        #drugi {
+    color: red;
+    margin: 30px;
+    font-style: italic;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h2>Zastava Belgije</h2>
+    <div class="belgija">
+    <div class="crna"></div>
+    <div class="žuta"></div>
+    <div class="crvena"></div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<h2>4x4 grid</h2>
+<div class="grid">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
+    <div>5</div><div>6</div><div>7</div><div>8</div>
+    <div>9</div><div>10</div><div>11</div><div>12</div>
+    <div>13</div><div>14</div><div>15</div><div>16</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<h2>Box model</h2>
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+<div class="box">Box 3</div>
+<div class="box">Box 4</div>
+<br>
+<br>
+<hr>
+<br>
+<h2>Paragrafi uređeni CSS-om</h2>
+<p class="klasa1">Ovo je prvi paragraf s klasom.</p>
+<p class="klasa2">Ovo je drugi paragraf s klasom.</p>
+<p class="klasa3">Ovo je treći paragraf s klasom.</p>
+<p id="prvi">Ovo je prvi paragraf s ID-jem.</p>
+<p id="drugi">Ovo je drugi paragraf s ID-jem.</p>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
