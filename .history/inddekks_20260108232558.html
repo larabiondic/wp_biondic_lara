@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moja GitHub stranica</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple-main: #7b6cff;
+      --purple-soft: #f2efff;
+      --purple-dark: #4b3fd6;
+    }
+
+    body {
+      scroll-behavior: smooth;
+    }
+
+    .bg-purple {
+      background: linear-gradient(135deg, var(--purple-main), var(--purple-dark));
+    }
+
+    .text-purple {
+      color: var(--purple-main);
+    }
+
+    .btn-purple {
+      background-color: var(--purple-main);
+      color: #fff;
+      border: none;
+    }
+
+    .btn-purple:hover {
+      background-color: var(--purple-dark);
+      color: #fff;
+    }
+
+    .section-padding {
+      padding: 5rem 0;
+    }
+
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--purple-main);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-purple fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Ime Prezime</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Početna</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">O meni</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Vještine</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projekti</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header id="home" class="bg-purple text-white text-center vh-100 d-flex align-items-center">
+<div class="container">
+<h1 class="display-3 fw-bold">Bok, ja sam Ime Prezime</h1>
+<p class="lead mt-3">Student informatike · Web dizajn · GitHub Pages</p>
+<a href="#about" class="btn btn-light btn-lg mt-4">Više o meni</a>
+</div>
+</header>
+
+
+<!-- About -->
+<section id="about" class="section">
+<div class="container">
+<div class="row align-items-center g-5">
+<div class="col-md-4 text-center">
+<img src="https://via.placeholder.com/300" class="profile-img" alt="Profil">
+</div>
+<div class="col-md-8">
+<h2 class="fw-bold text-purple mb-3">O meni</h2>
+<p class="fs-5">
+    Ja sam student informatike koji se kroz ovaj kolegij upoznao s osnovama izrade modernih web stranica.
+Posebno me zanima frontend razvoj, dizajn korisničkog sučelja i rad s Bootstrap frameworkom.
+Ova stranica služi kao moj osobni GitHub portfolio i pregled rada na predmetu.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Education -->
+<section id="education" class="section bg-light">
+<div class="container">
+<h2 class="text-center fw-bold text-purple mb-5">Obrazovanje</h2>
+<div class="timeline">
+<div class="timeline-item">
+<h5>Fakultet informatike</h5>
+<span class="badge badge-purple">2023 – danas</span>
+<p class="mt-2">Studij informatike s naglaskom na web tehnologije.</p>
+</div>
+<div class="timeline-item">
+<h5>Srednja škola</h5>
+<span class="badge badge-purple">2019 – 2023</span>
+<p class="mt-2">Tehnički smjer / opća gimnazija.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Skills -->
+<section id="skills" class="section">
+<div class="container">
+<h2 class="text-center fw-bold text-purple mb-5">Vještine</h2>
+<div class="row g-4">
+<div class="col-md-3"><div class="card p-4 text-center"><i class="bi bi-filetype-html fs-1 text-purple"></i><h6 class="mt-3">HTML5</h6></div></div>
+<div class="col-md-3"><div class="card p-4 text-center"><i class="bi bi-filetype-css fs-1 text-purple"></i><h6 class="mt-3">CSS3</h6></div></div>
+<div class="col-md-3"><div class="card p-4 text-center"><i class="bi bi-bootstrap fs-1 text-purple"></i><h6 class="mt-3">Bootstrap</h6></div></div>
+<div class="col-md-3"><div class="card p-4 text-center"><i class="bi bi-github fs-1 text-purple"></i><h6 class="mt-3">GitHub</h6></div></div>
+</div>
+</div>
+</section>
+<!-- Projects / Course Work -->
+<section id="projects" class="section bg-light">
+<div class="container">
+<h2 class="text-center fw-bold text-purple mb-5">Rad na ovom predmetu</h2>
+<div class="row g-4">
+<div class="col-md-4"><div class="card p-4 h-100"><h5>Zadaća 1</h5><p>Osnove HTML strukture.</p></div></div>
+<div class="col-md-4"><div class="card p-4 h-100"><h5>Zadaća 2</h5><p>CSS stilizacija i Bootstrap komponente.</p></div></div>
+<div class="col-md-4"><div class="card p-4 h-100"><h5>Zadaća 3</h5><p>Izrada osobne GitHub Pages stranice.</p></div></div>
+</div>
+</div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact" class="section">
+<div class="container text-center">
+<h2 class="fw-bold text-purple mb-4">Kontakt</h2>
+<p>GitHub: <a href="#" class="text-purple">github.com/username</a></p>
+<p>Email: ime.prezime@email.com</p>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-purple text-white text-center py-4">
+<p class="mb-0">© 2026 Ime Prezime · GitHub Pages</p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

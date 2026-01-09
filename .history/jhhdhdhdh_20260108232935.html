@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Osobna GitHub stranica</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple-main: #b8a9ff;   /* svjetlija ljubičasta */
+      --purple-soft: #faf8ff;
+      --purple-dark: #8f7cff;
+    }
+
+    body {
+      scroll-behavior: smooth;
+      background-color: #fff;
+    }
+
+    /* Glitter efekt (suptilan) */
+    .glitter {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glitter::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1.5px 1.5px at 70% 40%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1.5px 1.5px at 85% 70%, rgba(255,255,255,0.7), transparent);
+      animation: sparkle 6s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes sparkle {
+      from { transform: translateY(0); }
+      to { transform: translateY(-30px); }
+    }
+
+    .bg-purple {
+      background: linear-gradient(135deg, var(--purple-main), var(--purple-dark));
+    }
+
+    .text-purple {
+      color: var(--purple-dark);
+    }
+
+    .btn-purple {
+      background-color: var(--purple-dark);
+      color: white;
+      border-radius: 50px;
+      padding: 0.6rem 1.6rem;
+    }
+
+    .btn-purple:hover {
+      background-color: #7a67ff;
+      color: white;
+    }
+
+    .section {
+      padding: 6rem 0;
+    }
+
+    .card {
+      border: none;
+      border-radius: 1.5rem;
+      box-shadow: 0 15px 35px rgba(140,120,255,0.18);
+      transition: transform 0.3s ease;
+      background-color: white;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .profile-img {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid var(--purple-main);
+      box-shadow: 0 0 25px rgba(180,160,255,0.6);
+    }
+
+    .timeline {
+      border-left: 4px solid var(--purple-main);
+      padding-left: 2rem;
+    }
+
+    .badge-purple {
+      background-color: var(--purple-main);
+      color: #3b2f91;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-purple fixed-top shadow-sm glitter">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Ime Prezime</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Početna</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">O meni</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Obrazovanje</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Vještine</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Rad na predmetu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header id="home" class="bg-purple text-white text-center vh-100 d-flex align-items-center glitter">
+  <div class="container position-relative">
+    <h1 class="display-3 fw-bold">Bok, ja sam Ime Prezime</h1>
+    <p class="lead mt-3">Student informatike · Web dizajn · GitHub Pages</p>
+    <a href="#about" class="btn btn-light btn-lg mt-4">Više o meni</a>
+  </div>
+</header>
+
+<!-- About -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-4 text-center">
+        <img src="https://via.placeholder.com/300" class="profile-img" alt="Profil">
+      </div>
+      <div class="col-md-8">
+        <h2 class="fw-bold text-purple mb-3">O meni</h2>
+        <p class="fs-5">
+          Ja sam student informatike koji kroz ovaj kolegij razvija znanja iz web dizajna i izrade modernih stranica.
+          Posebno me zanima frontend razvoj, UX/UI i vizualni identitet web aplikacija.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="section bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold text-purple mb-5">Obrazovanje</h2>
+    <div class="timeline">
+      <div class="mb-4">
+        <h5>Fakultet informatike</h5>
+        <span class="badge badge-purple">2023 – danas</span>
+        <p class="mt-2">Studij informatike s fokusom na web tehnologije.</p>
+      </div>
+      <div class="mb-4">
+        <h5>Srednja škola</h5>
+        <span class="badge badge-purple">2019 – 2023</span>
+        <p class="mt-2">Tehnički ili gimnazijski smjer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="text-center fw-bold text-purple mb-5">Vještine</h2>
+    <div class="row g-4">
+      <div class="col-md-3"><div class="card p-4 text-center"><i class="bi bi-filetype-html fs-1 text-purple"></i><h6 class="mt-3">HTML5</h6></div></div>
+      <div class="col-md-3"><div class="card p-4 text-center"><i class="bi bi-filetype-css fs-1 text-purple"></i><h6 class="mt-3">CSS3</h6></div></div>
+      <div class="col-md-3"><div class="card p-4 text-center"><i class="bi bi-bootstrap fs-1 text-purple"></i><h6 class="mt-3">Bootstrap</h6></div></div>
+      <div class="col-md-3"><div class="card p-4 text-center"><i class="bi bi-github fs-1 text-purple"></i><h6 class="mt-3">GitHub</h6></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold text-purple mb-5">Rad na ovom predmetu</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="card p-4 h-100"><h5>Zadaća 1</h5><p>HTML osnove.</p></div></div>
+      <div class="col-md-4"><div class="card p-4 h-100"><h5>Zadaća 2</h5><p>Bootstrap i CSS stilizacija.</p></div></div>
+      <div class="col-md-4"><div class="card p-4 h-100"><h5>Zadaća 3</h5><p>Osobna GitHub Pages stranica.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <div class="container text-center">
+    <h2 class="fw-bold text-purple mb-4">Kontakt</h2>
+    <p>GitHub: <a href="#" class="text-purple">github.com/username</a></p>
+    <p>Email: ime.prezime@email.com</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-purple text-white text-center py-4 glitter">
+  <p class="mb-0">© 2026 Ime Prezime · GitHub Pages</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
